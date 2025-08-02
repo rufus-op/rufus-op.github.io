@@ -1,5 +1,3 @@
-'use client'
-
 import { motion } from 'framer-motion'
 import { ArrowLeft, Star, Download, ExternalLink, Check, Calendar, Smartphone, Users, Code } from 'lucide-react'
 import Link from 'next/link'
