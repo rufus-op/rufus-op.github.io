@@ -4,12 +4,19 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, FileText, Calendar, Shield, AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getAppById } from '@/data/apps'
+import { getAppById, apps } from '@/data/apps'
 
 interface TermsPageProps {
   params: {
     id: string
   }
+}
+
+// Generate static params for all app IDs
+export async function generateStaticParams() {
+  return apps.map((app) => ({
+    id: app.id,
+  }))
 }
 
 export default function TermsPage({ params }: TermsPageProps) {
